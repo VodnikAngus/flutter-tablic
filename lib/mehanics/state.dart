@@ -5,7 +5,6 @@ import 'package:flutter/widgets.dart';
 import 'package:tablic/main.dart';
 import 'package:tablic/play_card.dart';
 import 'package:tablic/player.dart';
-import 'dart:math' as Math;
 
 import 'package:tablic/screens/end_game.dart';
 
