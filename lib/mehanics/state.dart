@@ -24,7 +24,7 @@ class CardsState with ChangeNotifier {
   void createDeck() {
     deck = [];
     playCards = [];
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 14; i++) {
       if (i != 10) {
         deck.add(PlayCard(number: i + 1, suit: suits.clubs));
         deck.add(PlayCard(number: i + 1, suit: suits.diamonds));
