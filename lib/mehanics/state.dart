@@ -94,7 +94,7 @@ class CardsState with ChangeNotifier {
     int maxPoints = players.fold(0,
         (int max, player) => (player.points() > max) ? player.points() : max);
 
-    return maxPoints >= 10;
+    return maxPoints >= 101;
   }
 
   void draw() {
