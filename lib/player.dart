@@ -77,9 +77,9 @@ List<PlayCard> subsetEqual(
 
   if (hold.number == 1) {
     if (used.isEmpty)
-      test = subsetEqual(oof, [hold], sum - 11);
+      test = subsetEqual(oof, [hold], sum - 1);
     else {
-      test = subsetEqual(oof, [...used, hold], sum - 11);
+      test = subsetEqual(oof, [...used, hold], sum - 1);
     }
   }
 
@@ -88,8 +88,9 @@ List<PlayCard> subsetEqual(
   }
 
   if (used.isEmpty)
-    return subsetEqual(oof, [hold], sum - hold.number);
+    return subsetEqual(oof, [hold], sum - ((hold.number == 1) ? 11 : hold));
   else {
-    return subsetEqual(oof, [...used, hold], sum - hold.number);
+    return subsetEqual(
+        oof, [...used, hold], sum - ((hold.number == 1) ? 11 : hold));
   }
 }
