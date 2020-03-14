@@ -52,11 +52,6 @@ class CardsState with ChangeNotifier {
         notifyListeners();
       });
     }
-    playCards.addAll([
-      PlayCard(number: 10, suit: suits.clubs),
-      PlayCard(number: 1, suit: suits.clubs)
-    ]);
-    players[0].cards.add(PlayCard(number: 1, suit: suits.clubs));
   }
 
   void nextPlayer() async {
