@@ -31,7 +31,11 @@ class Player with ChangeNotifier {
 
   bool canCollect(PlayCard testCard, List<PlayCard> selectedCards) {
     List<PlayCard> selectedCardsCopy = [];
-    selectedCardsCopy.insertAll(0, selectedCards);
+    selectedCards.sort((PlayCard a, PlayCard b) => b.number - a.number);
+    selectedCardsCopy.insertAll(
+      0,
+      selectedCards,
+    );
     if (testCard.number == 1) {
       List<PlayCard> test;
       do {
